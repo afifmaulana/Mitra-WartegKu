@@ -57,10 +57,10 @@
             "English": "user login",
         },
         {
-            "User Key": "user:users.user-add-product",
+            "User Key": "user:users.user-add-food",
             "Russian" : "добавить продукт",
             "Arabic": "أضف المنتج",
-            "English": "add product",
+            "English": "add food",
         },
         {
             "User Key": "user:users.user-orders-list",
@@ -177,10 +177,10 @@
             "English": "vendor login",
         },
         {
-            "User Key": "vendor:vendors.vendor-add-product",
+            "User Key": "vendor:vendors.vendor-add-food",
             "Russian" : "добавить продукт",
             "Arabic": "أضف المنتج",
-            "English": "add product",
+            "English": "add food",
         },
         {
             "User Key": "vendor:vendors.vendor-orders-list",

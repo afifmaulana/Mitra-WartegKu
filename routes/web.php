@@ -19,4 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/store/login', 'Store\AuthController@showLoginForm')->name('store.login');
+Route::post('/store/login', 'Store\AuthController@login')->name('store.login.submit');
+
+
+
+Route::get('/food', 'Store\FoodDrinkController@index')->name('food.index');
+Route::get('/food/create', 'Store\FoodDrinkController@create')->name('food.create');
+Route::post('/food/store', 'Store\FoodDrinkController@store')->name('food.store');
+
 Route::get('/home', 'HomeController@index')->name('home');

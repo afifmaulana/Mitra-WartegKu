@@ -10,7 +10,25 @@
 <script src="{{ asset ('assets/js/icons/feather-icon/feather-icon.js') }}"></script>
 
 <!-- Sidebar jquery-->
-<script src="{{ asset ('assets/js/sidebar-menu.js') }}"></script>
+<script src="{{ asset ('assets/js/sidebar-menu.js') }} }}"></script>
+
+<!-- touchspin js-->
+<script src="{{ asset ('assets/js/touchspin/vendors.min.js') }}"></script>
+<script src="{{ asset ('assets/js/touchspin/touchspin.js') }}"></script>
+<script src="{{ asset ('assets/js/touchspin/input-groups.min.js') }}"></script>
+
+<!-- form validation js-->
+<script src="{{ asset ('assets/js/dashboard/form-validation-custom.js') }}"></script>
+
+<!-- ckeditor js-->
+<script src="{{ asset ('assets/js/editor/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset ('assets/js/editor/ckeditor/styles.js') }}"></script>
+<script src="{{ asset ('assets/js/editor/ckeditor/adapters/jquery.js') }}"></script>
+<script src="{{ asset ('assets/js/editor/ckeditor/ckeditor.custom.js') }}"></script>
+
+<!-- Zoom js-->
+<script src="{{ asset ('assets/js/jquery.elevatezoom.js') }}"></script>
+<script src="{{ asset ('assets/js/zoom-scripts.js') }}"></script>
 
 <!--chartist js-->
 <script src="{{ asset ('assets/js/chart/chartist/chartist.js') }}"></script>
@@ -28,6 +46,11 @@
 
 <script src="{{ asset ('assets/js/fontawesome.js') }}"></script>
 <script src="{{ asset ('assets/js/fontawesome.min.js') }}"></script>
+
+<!-- Jsgrid js-->
+<script src="{{ asset ('assets/js/jsgrid/jsgrid.min.js') }}"></script>
+<script src="{{ asset ('assets/js/jsgrid/griddata-page-list.js') }}"></script>
+<script src="{{ asset ('assets/js/jsgrid/jsgrid-page-list.js') }}"></script>
 
 <!--counter js-->
 <script src="{{ asset ('assets/js/counter/jquery.waypoints.min.js') }}"></script>

@@ -1,6 +1,6 @@
 
 
-$('.add-product img').elevateZoom({
+$('.add-food img').elevateZoom({
     zoomType: "inner",
     cursor: "crosshair"
 });

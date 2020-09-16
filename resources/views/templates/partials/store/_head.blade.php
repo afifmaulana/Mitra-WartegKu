@@ -28,6 +28,13 @@
     <!-- Prism css-->
     <link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/prism.css') }}">
 
+    <!-- jsgrid css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/jsgrid.css') }}">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/themify-icons.css') }}">
+
+
+
     <!-- Chartist css -->
     <link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/chartist.css') }}">
 
