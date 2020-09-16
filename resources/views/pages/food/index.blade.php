@@ -33,14 +33,14 @@
             <div class="card-body product-box">
                 <div class="img-wrapper">
                     <div class="front">
-                        <a href="#"><img src="../assets/images/pro3/34.jpg" class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                        <a href="#"><img src="{{asset('uploads/store/'.$food->image)}}" class="img-fluid blur-up lazyload bg-img" alt=""></a>
                         <div class="product-hover">
                             <ul>
                                 <li>
-                                    <button class="btn" type="button" data-original-title="" title=""><i class="ti-pencil-alt"></i></button>
+                                    <button class="btn" href="{{route('food.edit', $food->id)}}" type="button" data-original-title="" title=""><i class="fa fa-pencil"></i></button>
                                 </li>
                                 <li>
-                                    <button class="btn" type="button" data-toggle="modal" data-target="#exampleModalCenter" data-original-title="" title=""><i class="ti-trash"></i></button>
+                                    <button class="btn" type="button" data-toggle="modal" data-target="#exampleModalCenter" data-original-title="" title=""><i class="fa fa-trash"></i></button>
                                 </li>
                             </ul>
                         </div>
@@ -53,9 +53,10 @@
                     </a>
                     <h4>{{$food->price}}</h4>
                     <ul class="color-variant">
-                        <li class="bg-light0"></li>
-                        <li class="bg-light1"></li>
-                        <li class="bg-light2"></li>
+                        <li href="#" class="fa fa-eye"></li>
+                        <li href="{{route('food.edit', $food->id)}}" class="fa fa-pencil"></li>
+                        <li href="#" class="fa fa-trash"></li>
+
                     </ul>
                 </div>
             </div>

@@ -75,7 +75,9 @@ class FoodDrinkController extends Controller
      */
     public function edit($id)
     {
-        //
+        $food = FoodDrink::find($id);
+        $categories = Category::all();
+        return view('pages.food.edit', compact('food', 'categories'));
     }
 
     /**
@@ -87,7 +89,24 @@ class FoodDrinkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $food = FoodDrink::find($id);
+//        $food->store_id = Auth::guard('store')->user()->id;
+        $food->category_id = $request->category_id;
+        $food->name = $request->name;
+        $food->description = $request->description;
+        $food->price = $request->price;
+        $image_food=$request->file('image');
+        if ($image_food==''){
+            $food->image=$request->old_image;
+        }else{
+            $filename=time().'.'.$image_food->getClientOriginalExtension();
+            $path=public_path('uploads/store');
+            $image_food->move($path,$filename);
+            $food->image = $filename;
+        }
+
+        $food->update();
+        return redirect()->route('food.index');
     }
 
     /**
