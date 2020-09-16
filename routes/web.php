@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/store/login', 'Store\AuthController@showLoginForm')->name('store.login');
-Route::post('/store/login', 'Store\AuthController@login')->name('store.login.submit');
+Route::get('/store/login', 'Store\Auth\LoginController@showLoginForm')->name('store.login');
+Route::post('/store/login', 'Store\Auth\LoginController@login')->name('store.login.submit');
+Route::get('/store/logout', 'Store\Auth\LoginController@logout')->name('store.logout');
 
 
 
