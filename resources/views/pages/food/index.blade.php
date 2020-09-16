@@ -35,12 +35,16 @@
                     <div class="front">
                         <a href="#"><img src="{{asset('uploads/store/'.$food->image)}}" class="img-fluid blur-up lazyload bg-img" alt=""></a>
                         <div class="product-hover">
-                            <ul>
+                            <ul class="btn">
                                 <li>
-                                    <button class="btn" href="{{route('food.edit', $food->id)}}" type="button" data-original-title="" title=""><i class="fa fa-pencil"></i></button>
+                                    <a href="{{route('food.edit', $food->id)}}">
+                                    <button class="btn" type="button"><i class="fa fa-pencil"></i></button>
+                                    </a>
                                 </li>
                                 <li>
-                                    <button class="btn" type="button" data-toggle="modal" data-target="#exampleModalCenter" data-original-title="" title=""><i class="fa fa-trash"></i></button>
+                                    <a href="{{route('food.destroy', $food->id)}}">
+                                    <button class="btn" type="button"><i class="fa fa-trash"></i></button>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -52,12 +56,15 @@
                         <h6>{{$food->name}}</h6>
                     </a>
                     <h4>{{$food->price}}</h4>
-                    <ul class="color-variant">
-                        <li href="#" class="fa fa-eye"></li>
-                        <li href="{{route('food.edit', $food->id)}}" class="fa fa-pencil"></li>
-                        <li href="#" class="fa fa-trash"></li>
+                    {{--<a href="{{route('food.edit', $food->id)}}">--}}
+                        {{--<button class="btn-warning fa fa-pencil"></button>--}}
+                    {{--</a>--}}
+                    {{--<ul class="color-variant">--}}
+                        {{--<li href="#" class="fa fa-eye"></li>--}}
+                        {{--<li href="{{route('food.edit', $food->id)}}" class="fa fa-pencil"></li>--}}
+                        {{--<li href="#" class="fa fa-trash"></li>--}}
 
-                    </ul>
+                    {{--</ul>--}}
                 </div>
             </div>
         </div>

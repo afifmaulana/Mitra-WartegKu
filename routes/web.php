@@ -31,5 +31,6 @@ Route::get('/food/create', 'Store\FoodDrinkController@create')->name('food.creat
 Route::post('/food/store', 'Store\FoodDrinkController@store')->name('food.store');
 Route::get('/food/edit/{id}', 'Store\FoodDrinkController@edit')->name('food.edit');
 Route::patch('/food/update/{id}', 'Store\FoodDrinkController@update')->name('food.update');
+Route::get('/food/destroy/{id}', 'Store\FoodDrinkController@destroy')->name('food.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
