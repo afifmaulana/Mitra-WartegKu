@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\superadmin\Auth;
+namespace App\Http\Controllers\Store\Auth;
 
-use App\SuperAdmin;
+use App\Store;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -39,27 +39,27 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest:superadmin');
+        $this->middleware('guest:store');
     }
 
     public function showRegisterForm()
     {
-        return view('auth_superadmin.register');
+        return view('auth.register');
     }
 
-    public function store(Request $request){
-        $this->validate($request, [
-           'name'       => 'required',
-           'email'      => 'required|unique:super_admins|email',
-            'password'  => 'required|confirmed'
-        ]);
+    public function register(Request $request){
+//        $this->validate($request, [
+//           'name'       => 'required',
+//           'email'      => 'required|unique:super_admins|email',
+//            'password'  => 'required|confirmed'
+//        ]);
 
-        $data = new SuperAdmin();
+        $data = new Store();
         $data->name = $request->name;
         $data->email = $request->email;
         $data->password = bcrypt($request->password);
         if ($data->save()){
-            return redirect()->route('superadmin.login');
+            return redirect()->route('store.login');
         }else{
             return back()->withErrors();
         }

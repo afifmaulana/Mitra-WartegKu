@@ -18,10 +18,28 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
-        }
+        switch ($guard){
 
+            case 'store':
+                if (Auth::guard($guard)->check()){
+                    return redirect()->route('food.index');
+                }
+                break;
+
+
+            // case 'driver':
+            //     if (Auth::guard($guard)->check()){
+            //         return 'drvier';
+            //     }
+            //     break;
+
+
+            default:
+                if (Auth::guard($guard)->check()){
+                    return 'belom dibuat bro';
+                }
+                break;
+        }
         return $next($request);
     }
 }

@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class FoodDrinkController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:store');
+    }
     /**
      * Display a listing of the resource.
      *

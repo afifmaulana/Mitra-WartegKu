@@ -42,14 +42,14 @@
                                     <div class="form-group mb-3 row">
                                         <label for="validationCustom01" class="col-xl-3 col-sm-4 mb-0">Food :</label>
                                         <input class="form-control col-xl-8 col-sm-7" id="validationCustom01"
-                                               name="name" type="text" required="">
+                                               name="name" type="text" required="" value="{{$food->name}}">
                                         <div class="valid-feedback">Looks good!</div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleFormControlSelect1" class="col-xl-3 col-sm-4 mb-0">Category :</label>
                                         <select class="form-control digits col-xl-8 col-sm-7" id="exampleFormControlSelect1" name="category_id">
                                             @foreach($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->category}}</option>
+                                                <option value="{{$category->id}}"@if($category->id == $food->category_id){{"selected"}}@endif>{{$category->category}}</option>
                                             @endforeach
 
                                         </select>
@@ -65,13 +65,13 @@
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-sm-4">Description :</label>
                                         <div class="col-xl-8 col-sm-7 pl-0 description-sm">
-                                            <textarea  name="description" cols="92" rows="8"></textarea>
+                                            <textarea  name="description" cols="92" rows="8">{{$food->description}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group mb-3 row">
                                         <label for="validationCustom01" class="col-xl-3 col-sm-4 mb-0">Price :</label>
                                         <input class="form-control col-xl-8 col-sm-7" id="validationCustom01"
-                                               name="price" type="text" required="">
+                                               name="price" type="text" required="" value="{{$food->price}}">
                                         <div class="valid-feedback">Looks good!</div>
                                     </div>
 
