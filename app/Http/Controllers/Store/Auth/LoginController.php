@@ -61,7 +61,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::guard('store')->attempt($credential, $request->remember)){
-            return redirect()->intended(route('food.index'));
+            return redirect()->intended(route('dashboard.index'));
         }
 
         return redirect()->back()->withInput($request->only('email', 'remember'));
