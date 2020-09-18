@@ -16,8 +16,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $datas = Store::where(Auth::guard('store')->user()->id);
-        return view('pages.profile.index', compact('datas'));
+        // $datas = Store::where('id', Auth::guard('store')->user()->id);
+        return view('pages.profile.index');
 
     }
 
@@ -41,21 +41,19 @@ class ProfileController extends Controller
     {
         $data = Auth::guard('store')->user();
         $data->name = $request->name;
-        $data->logo = $request->logo;
         $data->address = $request->address;
-
-        if ($request->file('image') == ''){
-            $data->foto = $request->old_foto;
+        if ($request->file('logo') == ''){
+            $data->logo = $request->old_ogo;
         }else{
-            $file = $request->file('image');
-            $file_name = date('ymdHis') . "-" . $file->getClientOriginalName();
-            $file_path = 'data-calon/' . $file_name;
-            Storage::disk('s3')->put($file_path, file_get_contents($file));
-            $data->foto = Storage::disk('s3')->url($file_path, $file_name);
+            $image=$request->file('logo');
+            $filename=rand().'.'.$image->getClientOriginalExtension();
+            $path=public_path('uploads/store');
+            $image->move($path,$filename);
+            $data->logo = $filename;
         }
         $data->save();
 
-        return redirect()->route('profilsekolah.index')->with('create', 'Berhasil mengubah Data');
+        return redirect()->route('profile.index');
 
     }
 

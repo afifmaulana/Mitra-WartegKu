@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3db5382e-d9a2-4641-ad9b-8bc7d5bdc18a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Store/Auth/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/Auth/LoginController.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/templates/partials/store/_header.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/partials/store/_header.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/templates/partials/store/_sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/partials/store/_sidebar.blade.php" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/profile/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/profile/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,18 +42,20 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/profile/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="160" column="86" lean-forward="false" selection-start-line="160" selection-start-column="86" selection-end-line="160" selection-end-column="86" />
+            <state relative-caret-position="106">
+              <caret line="149" column="66" lean-forward="true" selection-start-line="149" selection-start-column="66" selection-end-line="149" selection-end-column="66" />
               <folding>
                 <element signature="e#88#888#0#HTML" expanded="false" />
                 <element signature="e#5459#7539#0#HTML" expanded="false" />
-                <marker date="1600356138729" expanded="true" signature="9:26" ph="..." />
-                <marker date="1600356138729" expanded="true" signature="37:46" ph="..." />
-                <marker date="1600356138729" expanded="true" signature="8686:8726" ph="..." />
-                <marker date="1600356138729" expanded="true" signature="8690:8726" ph="..." />
-                <marker date="1600356138729" expanded="true" signature="8961:8971" ph="..." />
-                <marker date="1600356138729" expanded="true" signature="9673:9715" ph="..." />
-                <marker date="1600356138729" expanded="true" signature="10602:10612" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="9:26" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="37:46" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="8686:8726" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="8690:8726" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="8961:8971" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="9673:9708" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="10611:10621" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="11409:11449" ph="..." />
+                <marker date="1600402795815" expanded="true" signature="11684:11694" ph="..." />
               </folding>
             </state>
           </provider>
@@ -481,12 +479,12 @@
       <workItem from="1600156641369" duration="3965000" />
       <workItem from="1600181147112" duration="68000" />
       <workItem from="1600182028046" duration="36603000" />
-      <workItem from="1600321549342" duration="16904000" />
+      <workItem from="1600321549342" duration="19434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90479000" />
+    <option name="totallyTimeSpent" value="93009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,7 +497,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1091,18 +1088,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/profile/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="160" column="86" lean-forward="false" selection-start-line="160" selection-start-column="86" selection-end-line="160" selection-end-column="86" />
+        <state relative-caret-position="106">
+          <caret line="149" column="66" lean-forward="true" selection-start-line="149" selection-start-column="66" selection-end-line="149" selection-end-column="66" />
           <folding>
             <element signature="e#88#888#0#HTML" expanded="false" />
             <element signature="e#5459#7539#0#HTML" expanded="false" />
-            <marker date="1600356138729" expanded="true" signature="9:26" ph="..." />
-            <marker date="1600356138729" expanded="true" signature="37:46" ph="..." />
-            <marker date="1600356138729" expanded="true" signature="8686:8726" ph="..." />
-            <marker date="1600356138729" expanded="true" signature="8690:8726" ph="..." />
-            <marker date="1600356138729" expanded="true" signature="8961:8971" ph="..." />
-            <marker date="1600356138729" expanded="true" signature="9673:9715" ph="..." />
-            <marker date="1600356138729" expanded="true" signature="10602:10612" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="9:26" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="37:46" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="8686:8726" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="8690:8726" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="8961:8971" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="9673:9708" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="10611:10621" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="11409:11449" ph="..." />
+            <marker date="1600402795815" expanded="true" signature="11684:11694" ph="..." />
           </folding>
         </state>
       </provider>

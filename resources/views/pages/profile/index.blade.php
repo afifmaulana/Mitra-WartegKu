@@ -31,10 +31,10 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="profile-details text-center">
-                            <img src="../assets/images/dashboard/designer.jpg" alt=""
+                        <img src="{{asset('uploads/store/'.Auth::guard('store')->user()->logo)}}" alt=""
                                  class="img-fluid img-90 rounded-circle blur-up lazyloaded">
-                            <h5 class="f-w-600 mb-0">John deo</h5>
-                            <span>johndeo@gmail.com</span>
+                            <h5 class="f-w-600 mb-0">{{Auth::guard('store')->user()->name}}</h5>
+                            <span>{{Auth::guard('store')->user()->email}}</span>
                             <div class="social">
                                 <div class="form-group btn-showcase">
                                     <button class="btn social-btn btn-fb d-inline-block"><i class="fa fa-facebook"></i>
@@ -90,7 +90,7 @@
                             </li>
                             <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-toggle="tab"
                                                     href="#top-contact" role="tab" aria-controls="top-contact"
-                                                    aria-selected="false"><i data-feather="settings" class="mr-2"></i>Contact</a>
+                                                    aria-selected="false"><i data-feather="settings" class="mr-2"></i>Edit Profile</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="top-tabContent">
@@ -135,10 +135,10 @@
                             <div class="tab-pane fade" id="top-contact" role="tabpanel"
                                  aria-labelledby="contact-top-tab">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <h3>Ubah Profile</h3>
                                         <div class="theme-card">
-                                            <form class="theme-form" method="POST" action="#">
+                                        <form class="theme-form" method="POST" action="{{route('profile.store')}}" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="form-group">
                                                     <label for="name">Nama Warung</label>
@@ -146,7 +146,7 @@
                                                            class="form-control @error('name') is-invalid @enderror"
                                                            id="name"
                                                            placeholder="Masukkan Nama Warung" name="name" required=""
-                                                           value="{{Auth::guard('store')->user()->nama_admin}}">
+                                                           value="{{Auth::guard('store')->user()->name}}">
                                                     @error('name')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -158,7 +158,7 @@
                                                     <input type="text"
                                                            class="form-control @error('email') is-invalid @enderror"
                                                            id="email"
-                                                           placeholder="Email" readonly value="{{Auth::guard('adminsekolah')->user()->email}}">
+                                                           placeholder="Email" readonly value="{{Auth::guard('store')->user()->email}}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="review">Password</label>
@@ -169,12 +169,39 @@
                                                            name="password">
                                                     @error('password')
                                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                            </span>
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
                                                     @enderror
                                                 </div>
 
-                                                <button type="submit" class="btn btn-solid">Register</button>
+
+                                                <div class="form-group">
+                                                    <label>File upload</label>
+                                                    <input type="hidden" name="old_logo" value="{{Auth::guard('store')->user()->logo}}"/>
+                                                    <input class="form-control {{$errors->has('logo')?'is-invalid':''}}"
+                                                           type="file" name="logo" onchange="loadfile(event)">
+                                                    @error('logo')
+                                                    <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                    @enderror
+                                                    <img id="output" class="img-fluid" height="100" width="100"
+                                                         src="{{asset('uploads/store/'.Auth::guard('store')->user()->logo)}}">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="exampleTextarea1">Alamat</label>
+                                                    <textarea class="form-control @error('address') is-invalid @enderror"
+                                                              id="exampleTextarea1" rows="2" name="address"
+                                                    placeholder="Masukkan Alamat Sekolah">{{Auth::guard('store')->user()->address}}</textarea>
+                                                    @if ($errors->has('address'))
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <p><b>{{ $errors->first('address') }}</b></p>
+                                                        </span>
+                                                    @endif
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary-gradien">Simpan</button>
                                             </form>
                                         </div>
                                     </div>
